@@ -1,5 +1,5 @@
-treehugger.js
-=============
+Treehugger for Node
+===================
 
 `treehugger.js` is a Javascript library for program processing. It
 has generic means to represent and manipulate (analyze, transform)
@@ -17,7 +17,8 @@ It consists of three parts:
     and analyses reconstructing the type structure and first attempts at type-inference.  
     `lib/treehugger/js/*.js`
 
-The project relies on [require.js](http://requirejs.org) for library loading.
+This project has been ported to CommonJS. File any issues or issue Pull Requests as necessary, if there's any missing functionality.
+The original, Require.js package for this project is here: (Treehugger.js)[https://www.npmjs.org/package/treehugger]
 
 AST Representation
 ------------------

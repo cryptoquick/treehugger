@@ -1,9 +1,9 @@
-define(function(require, exports, module) {
+var tree = require('./tree');
 
-var tree = require('treehugger/tree');
+var exports = {};
 
-if (!Function.prototype.curry) {
-    Function.prototype.curry = function() {
+if (!global.Function.prototype.curry) {
+    global.Function.prototype.curry = function() {
         var fn = this,
             args = Array.prototype.slice.call(arguments);
         return function() {
@@ -12,7 +12,7 @@ if (!Function.prototype.curry) {
     };
 }
 
-function normalizeArgs(args) {
+global.normalizeArgs = function (args) {
     if (args.length === 1 && args[0].apply) { // basic, one function, shortcut!
         return args[0];
     }
@@ -204,4 +204,4 @@ exports.addParentPointers = function(node) {
     });
 };
 
-});
+module.exports = exports;

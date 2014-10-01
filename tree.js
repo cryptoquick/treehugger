@@ -1,4 +1,4 @@
-define(function(require, exports, module) {
+var exports = {};
 
 function inRange(p, pos, exclusive) {
     if(p && p.sl <= pos.line && pos.line <= p.el) {
@@ -57,7 +57,7 @@ Node.prototype.findNode = function(pos) {
 
 /**
  * Represents a constructor node
- * 
+ *
  * Example: Add(Num("1"), Num("2")) is constucted
  *    using new ConsNode(new ConsNode("Num", [new StringNode("1")]),
  *                                         new ConsNode("Num", [new StringNode("2")]))
@@ -179,10 +179,10 @@ ConsNode.prototype.getPos = function() {
     var result = nodePos
         ? {sl : nodePos.sl, sc : nodePos.sc, el : nodePos.el, ec : nodePos.ec}
         : {sl : Number.MAX_VALUE, sc : Number.MAX_VALUE, el : 0, ec : 0};
-    
+
     var hasSl = false;
     var hasSc = false;
-    
+
     for (var i = 0; i < this.length; i++) {
         var p = this[i].getPos();
 
@@ -199,7 +199,7 @@ ConsNode.prototype.getPos = function() {
             result.ec = p.ec || result.ec;
         }
     }
-    
+
     return result;
 };
 
@@ -235,7 +235,7 @@ exports.cons = function(name, children) {
  * AST node representing a list
  * e.g. for constructors with variable number of arguments, e.g. in
  *      Call(Var("alert"), [Num("10"), Num("11")])
- * 
+ *
  */
 function ListNode (children) {
     for(var i = 0; i < children.length; i++)
@@ -610,4 +610,4 @@ exports.PlaceholderNode = PlaceholderNode;
 exports.parse = parseCached;
 exports.inRange = inRange;
 
-});
+module.exports = exports;

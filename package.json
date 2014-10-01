@@ -1,18 +1,34 @@
 {
-  "name" : "treehugger",
-  "version" : "0.0.2",
-  "description" : "treehugger is a Javascript library for program processing",
-  "author": "ajax.org B.V. <info@ajax.org>",
+  "name": "treehugger-node",
+  "version": "0.0.3",
+  "description": "Treehugger is a Javascript library for program processing. Ported to Node.",
+  "author": "Hunter Trujillo <cryptoquick@gmail.com>",
   "contributors": [
-    { "name": "Zef Hemel", "email": "zef@c9.io" },
-    { "name": "Lennart Kats", "email": "lennart@c9.io" },
-    { "name": "Harutyun Amirjanyan", "email": "harutyun@c9.io" }
+    {
+      "name": "Zef Hemel",
+      "email": "zef@c9.io"
+    },
+    {
+      "name": "Lennart Kats",
+      "email": "lennart@c9.io"
+    },
+    {
+      "name": "Harutyun Amirjanyan",
+      "email": "harutyun@c9.io"
+    },
+    {
+      "name": "Hunter Trujillo",
+      "email": "cryptoquick@gmail.com"
+    }
   ],
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/ajaxorg/treehugger.git" 
-  },  
-  "engines" : {
-     "node" : ">= 0.4.0"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/ajaxorg/treehugger.git"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "acorn": "^0.4.0"
   }
 }
