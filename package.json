@@ -1,6 +1,6 @@
 {
   "name": "treehugger-node",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Treehugger is a Javascript library for program processing. Ported to Node.",
   "author": "Hunter Trujillo <cryptoquick@gmail.com>",
   "contributors": [
